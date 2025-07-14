@@ -10,6 +10,12 @@
           var { getSharedSecrets, schnorr, utils } = nobleSecp256k1
           var crypto = window.crypto
           var getrand = size => crypto.getRandomValues(new Unit8Array(size))
+          var sha256 = bitcoinjs.crypto.sha256
+          var keypair = bitcoinjs.ECPair.makeRandom()
+          var privKey = keypair.privateKey.toString( "hex" )
+          var pubKey = keypair.publicKey.toString( "hex" )
+          pubKey     = pubKey.substring( 2 )
+          console.log( pubKey )
         </script>
         
     </head>
