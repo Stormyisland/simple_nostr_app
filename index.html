@@ -6,9 +6,11 @@
               <meta charset="UTF-8">
         <script src="https://bitcoincore.tech/apps/bitcoinjs-ui/lib/bitcoinjs-libjs"></script>
         <script src ="https://bundle.run/noble-secp256k1@1.2.14"></script>
-        var { getSharedSecrets, schnorr, utils } = nobleSecp256k1
-        var crypto = window.crypto
-      var getrand = size => crypto.getRandomValues(new Unit8Array(size))
+        <script>
+          var { getSharedSecrets, schnorr, utils } = nobleSecp256k1
+          var crypto = window.crypto
+          var getrand = size => crypto.getRandomValues(new Unit8Array(size))
+        </script>
         
     </head>
     <body></body>
