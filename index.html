@@ -18,7 +18,16 @@
           console.log( pubKey )
           var relay ="";
           var socket = webSocket( relay );
-          socket.addEventListener('message',
+          socket.addEventListener('message', async function(message) {
+              var [ type, subID, event ] =JSON.parse(message.data):
+            var {kind, content } = event || {}
+              if (!event || event === true) return
+            console.log(message", event)
+            if (kind === 4 {
+              content = await decrypt(privKey, pubKey, content)
+            }
+            console.log('content:', content)
+            })
           
         </script>
         event.id
