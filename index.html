@@ -49,8 +49,13 @@ cds
                   "pubkey" : pubkey,
           }
           var signedEvent = await getSignedEvent(event, privKey)
-          console.log("signedEvent")
-                  
+          console.log("signedEvent": signedEvent)
+          socket.send(JSON.stringify(["EVENT", signedEvent ]))
+            })
+
+
+          
+                 
         </script>
         event.id
     </head>
