@@ -53,8 +53,11 @@ cds
           socket.send(JSON.stringify(["EVENT", signedEvent ]))
             })
 
-          async function getSignedEvent
-
+          async function getSignedEvent event, privateKey){
+            var eventData = JSON.stringify([
+              0,
+              event['pubkey'],
+ 
 
           
                  
